@@ -19,8 +19,8 @@ metadata:
 spec:
   sources:
   - image: gcr.io/paketo-buildpacks/go
-  - image: paketo-buildpacks/java
-  - image: paketo-buildpacks/nodejs
+  - image: gcr.io/paketo-buildpacks/java
+  - image: gcr.io/paketo-buildpacks/nodejs
 
 ---
 

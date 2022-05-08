@@ -1,0 +1,18 @@
+apiVersion: kpack.io/v1alpha2
+kind: Image
+metadata:
+  generateName: silly-demo-
+  namespace: build
+spec:
+  tag: vfarcic/silly-demo
+  additionalTags:
+  - vfarcic/silly-demo:latest
+  - vfarcic/silly-demo:0.0.1
+  serviceAccountName: registry-creds
+  builder:
+    name: silly-demo
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/vfarcic/kpack-demo
+      revision: ebb790f3959c05e6c196e88016a243a0053f450a
